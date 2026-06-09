@@ -351,22 +351,19 @@ html.no-js #intro{display:none!important}
 .cards-label{margin:64px 0 26px;font-family:var(--font-display);font-style:italic;
   font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--navy)}
 
-/* woven asymmetric "filo" bento — warm, not an identical white grid */
-.cards-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{
   --accent:var(--coral);
   position:relative;border-radius:18px;padding:clamp(26px,2.4vw,34px);
-  background:linear-gradient(180deg,
-    color-mix(in oklab,var(--accent) 10%,var(--panna)),
-    color-mix(in oklab,var(--accent) 4%,var(--panna)));
-  box-shadow:0 1px 0 rgba(26,26,26,.03),0 30px 60px -50px rgba(26,26,26,.5);
+  background:#fff;
+  border:1px solid rgba(26,26,26,.08);
+  box-shadow:0 2px 12px rgba(26,26,26,.06);
   overflow:hidden;text-align:left;width:100%;min-height:228px;
   transform-style:preserve-3d;will-change:transform;
   transition:box-shadow .5s var(--ease),transform .35s var(--ease);
 }
 .card::before{
   content:"";position:absolute;inset:0;border-radius:inherit;
-  box-shadow:inset 0 0 0 1px color-mix(in oklab,var(--accent) 28%,transparent);
   transition:box-shadow .5s var(--ease)}
 .card-wire{position:absolute;right:-8%;top:-14%;width:60%;color:var(--accent);
   opacity:.5;pointer-events:none;z-index:0}
@@ -379,8 +376,8 @@ html.no-js #intro{display:none!important}
 .card .card-in{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;transform:translateZ(40px)}
 .card-icon{width:44px;height:44px;margin-bottom:18px;color:var(--accent)}
 .card-icon path{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:clamp(1.32rem,1.7vw,1.6rem);font-weight:500;margin-bottom:8px;color:var(--nero);text-wrap:balance}
-.card .card-sub{font-family:var(--font-display);font-style:italic;color:var(--nero-soft);font-size:1.04rem;line-height:1.45}
+.card h3{font-size:clamp(1.1rem,1.4vw,1.3rem);font-weight:700;margin-bottom:10px;color:var(--nero);text-wrap:balance}
+.card .card-sub{font-family:var(--font-body);font-style:normal;color:var(--nero-soft);font-size:.97rem;line-height:1.6}
 .card .card-more{margin-top:auto;padding-top:22px;display:inline-flex;align-items:center;gap:.5em;
   font-family:var(--font-body);font-size:.82rem;font-weight:600;letter-spacing:.06em;
   text-transform:uppercase;color:var(--accent)}
@@ -388,12 +385,6 @@ html.no-js #intro{display:none!important}
 .card:hover .card-more svg{transform:translateX(5px)}
 .card[data-accent="teal"]{--accent:var(--teal-deep)}
 .card[data-accent="navy"]{--accent:var(--navy)}
-.cards-grid .card:nth-child(1){grid-column:span 7}
-.cards-grid .card:nth-child(2){grid-column:span 5}
-.cards-grid .card:nth-child(3){grid-column:span 5}
-.cards-grid .card:nth-child(4){grid-column:span 7}
-.cards-grid .card:nth-child(5){grid-column:span 6}
-.cards-grid .card:nth-child(6){grid-column:span 6}
 
 .aiuto-cta{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;
   background:var(--panna);border-radius:16px;padding:34px 36px;
@@ -750,47 +741,47 @@ footer .wrap{padding-block:clamp(64px,9vh,110px)}
           <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 28 C 14 12, 26 12, 32 28"/><path d="M6 22 C 16 30, 24 30, 34 22"/></svg>
           <h3>Endometriosi e dolore pelvico cronico</h3>
           <p class="card-sub">Sostegno nel percorso multidisciplinare di cura e nell'impatto della malattia cronica sulla qualità di vita.</p>
-          <span class="card-more">Scopri <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-more">SCOPRI DI PIÙ →</span>
         </span>
       </button>
       <button class="card reveal-scale" data-card="1" data-accent="teal" aria-haspopup="dialog">
         <span class="card-in">
-          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 32 C 8 16, 32 16, 32 32"/><path d="M14 24 L 20 18 L 26 24"/></svg>
+          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="12"/><path d="M20 11 v9 l6 4"/></svg>
           <h3>Psico-oncologia</h3>
           <p class="card-sub">Accompagnamento del paziente oncologico e dei familiari nelle diverse fasi della malattia e della cura.</p>
-          <span class="card-more">Scopri <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-more">SCOPRI DI PIÙ →</span>
         </span>
       </button>
       <button class="card reveal-scale" data-card="2" data-accent="navy" aria-haspopup="dialog">
         <span class="card-in">
-          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 8 C 10 8, 8 22, 14 28 C 18 32, 22 32, 26 28 C 32 22, 30 8, 20 8 Z"/><path d="M20 20 v 12"/></svg>
+          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 8 v24M9 14 l22 12M9 26 l22-12"/></svg>
           <h3>Disturbi psicosomatici</h3>
           <p class="card-sub">Trattamento della sofferenza psichica che si esprime attraverso il corpo, nella relazione mente-corpo.</p>
-          <span class="card-more">Scopri <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-more">SCOPRI DI PIÙ →</span>
         </span>
       </button>
       <button class="card reveal-scale" data-card="3" data-accent="coral" aria-haspopup="dialog">
         <span class="card-in">
           <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M14 16 a5 5 0 1 0 0.01 0"/><path d="M26 16 a5 5 0 1 0 0.01 0"/><path d="M6 34 c2-7 8-9 8-9 m12 0 c0 0 6 2 8 9"/></svg>
           <h3>Difficoltà relazionali e familiari</h3>
-          <p class="card-sub">Abitare le relazioni in momenti di crisi.</p>
-          <span class="card-more">Scopri <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="card-sub">Colloqui individuali per affrontare crisi, conflitti, momenti di passaggio nelle relazioni di coppia e familiari.</p>
+          <span class="card-more">SCOPRI DI PIÙ →</span>
         </span>
       </button>
       <button class="card reveal-scale" data-card="4" data-accent="teal" aria-haspopup="dialog">
         <span class="card-in">
-          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 24 h22"/><path d="M22 18 l6 6 -6 6"/><path d="M34 16 v8"/></svg>
+          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M10 20 a10 10 0 1 0 10-10"/><path d="M20 6 l-4 4 4 4"/></svg>
           <h3>Cambiamenti e transizioni di vita</h3>
-          <p class="card-sub">Tra disorientamento e bisogno di coerenza.</p>
-          <span class="card-more">Scopri <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="card-sub">Sostegno nei momenti di passaggio: lutto, separazioni, scelte importanti, nuove fasi della vita.</p>
+          <span class="card-more">SCOPRI DI PIÙ →</span>
         </span>
       </button>
       <button class="card reveal-scale" data-card="5" data-accent="navy" aria-haspopup="dialog">
         <span class="card-in">
-          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 26 q4 -10 8 0 t8 0 t8 0 t4 0"/><path d="M20 8 v4 M20 32 v0"/></svg>
+          <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="11" r="3.5"/><path d="M6 28 q4.5-10 9 0 t9 0 t9 0"/></svg>
           <h3>Ansia, stress, vissuti depressivi</h3>
-          <p class="card-sub">Quando il malessere toglie spazio.</p>
-          <span class="card-more">Scopri <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="card-sub">Spazio d'ascolto e percorso clinico per dare un nome al disagio e sperimentare una nuova forma di equilibrio.</p>
+          <span class="card-more">SCOPRI DI PIÙ →</span>
         </span>
       </button>
     </div>
