@@ -1,0 +1,12 @@
+FOTO DEL SITO
+=============
+
+Metti qui due immagini con questi nomi esatti:
+
+  • studio.jpg   → foto dello Studio Rêve (esce nell'hero, riquadro verticale 4:5)
+  • giulia.png   → ritratto della Dott.ssa Giulia Mirabile (sezione "Chi sono", 3:4)
+
+Se i file non ci sono, il sito mostra dei segnaposto eleganti e funziona lo stesso.
+Appena li aggiungi (con questi nomi), compaiono automaticamente: basta ricaricare la pagina.
+
+Consiglio: comprimi le foto per il web (es. larghezza max ~1400px, qualità ~80%).
