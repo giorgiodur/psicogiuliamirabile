@@ -237,10 +237,11 @@ html.menu-open #mobileMenu a{animation:menuIn .6s var(--ease) forwards}
 /* ============================================================
    HERO
    ============================================================ */
-#hero{padding-top:clamp(120px,18vh,200px);padding-bottom:clamp(50px,8vh,90px);overflow:hidden;isolation:isolate;
-  background:radial-gradient(90% 80% at 25% 35%,#F4EEE3 0%,#FFFBF7 70%)}
+#hero{padding-top:clamp(120px,18vh,200px);padding-bottom:clamp(50px,8vh,90px);overflow:hidden;isolation:isolate}
 #hero::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
-  background:radial-gradient(55% 55% at 92% 78%,rgba(49,170,170,.13),transparent 70%);}
+  background:
+    radial-gradient(60% 50% at 12% 8%,rgba(231,132,132,.12),transparent 70%),
+    radial-gradient(55% 55% at 92% 78%,rgba(49,170,170,.13),transparent 70%);}
 .hero-grid{
   display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center;
 }
