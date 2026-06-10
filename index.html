@@ -335,6 +335,7 @@ html.no-js #intro{display:none!important}
    ============================================================ */
 #aiuto{background:var(--crema)}
 .section-head{max-width:54ch}
+.spec-row{white-space:nowrap}
 .section-head .h-section{margin:18px 0}
 .aiuto-intro{
   margin-top:46px;max-width:64ch;border-radius:20px;padding:clamp(26px,3vw,38px);
@@ -590,6 +591,7 @@ footer .wrap{padding-block:clamp(64px,9vh,110px)}
 }
 @media(max-width:640px){
   :root{--slow:.9s}
+  .spec-row{white-space:normal}
   .spec-item{display:block}
   .cards-grid,.lavoro-grid,.ct-grid{grid-template-columns:1fr}
   .cards-grid .card{grid-column:auto;min-height:0}
@@ -714,9 +716,7 @@ footer .wrap{padding-block:clamp(64px,9vh,110px)}
     <div class="section-head" style="max-width:80ch">
       <h2 class="h-section reveal">
         Supporto psicologico e psicoterapia, con esperienza in
-        <span class="spec-item"><em style="color:#E78484">endometriosi</em>,</span>
-        <span class="spec-item"><em style="color:#1F7878">psico-oncologia</em></span>
-        <span class="spec-item">e <em class="c-navy">psicosomatica</em>.</span>
+        <span class="spec-row"><span class="spec-item"><em style="color:#E78484">endometriosi</em>,</span> <span class="spec-item"><em style="color:#1F7878">psico-oncologia</em></span> <span class="spec-item">e <em class="c-navy">psicosomatica</em>.</span></span>
       </h2>
     </div>
 
