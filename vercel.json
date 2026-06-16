@@ -1,6 +1,14 @@
 {
   "buildCommand": "",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "psicogiuliamirabile.it" }],
+      "destination": "https://www.psicogiuliamirabile.it/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/sitemap.xml",
