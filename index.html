@@ -951,6 +951,40 @@ footer .wrap{padding-block:clamp(64px,9vh,110px)}
       </button>
     </div>
 
+    <!-- Testi completi delle card: statici per Google, mostrati nella modale al clic -->
+    <div class="card-texts" hidden>
+      <article data-card-text="0">
+        <h3>Endometriosi e dolore pelvico cronico</h3>
+        <p>L'endometriosi è una patologia che può avere un impatto profondo non solo sul corpo, ma sulla qualità della vita complessiva: dolore cronico, fatica, ricadute sul piano relazionale, lavorativo e sulla progettualità — incluso il desiderio di maternità.</p>
+        <p>Dare spazio al dolore, alle fatiche connesse al lungo e spesso complesso percorso diagnostico e a una sofferenza che non sempre trova riconoscimento immediato dall'esterno può sostenere la possibilità di dare un significato più chiaro a ciò che si sta vivendo, ridurre il senso di isolamento e disorientamento che spesso accompagna la malattia e favorire una modalità più abitabile di stare nella propria esperienza.</p>
+      </article>
+      <article data-card-text="1">
+        <h3>Psico-oncologia</h3>
+        <p>La diagnosi oncologica e il percorso di cura possono rappresentare un momento di forte discontinuità nella vita della persona e dei suoi familiari. Accanto agli aspetti medici, emergono vissuti emotivi complessi — paura, incertezza, rabbia, smarrimento — che attraversano le diverse fasi della malattia, dalla diagnosi ai trattamenti fino al follow-up.</p>
+        <p>Sostenere la possibilità di dare parola a queste esperienze può favorire il riconoscimento di ciò che, nel tempo, può emergere anche come risorsa o modalità di adattamento e aiutare a ritrovare una continuità dentro il cambiamento che la malattia comporta, sia per la persona sia per il suo contesto familiare.</p>
+      </article>
+      <article data-card-text="2">
+        <h3>Disturbi psicosomatici</h3>
+        <p>A volte compaiono sintomi che non trovano una chiara spiegazione medica, oppure il corpo diventa il luogo in cui prende forma una sofferenza emotiva che fatica a trovare altre modalità di espressione, con ricadute sul benessere e sulla qualità della vita.</p>
+        <p>L'esplorazione del sintomo e di ciò che porta con sé può aiutare a comprendere come questi segnali si inseriscono nella storia personale e nell'esperienza complessiva della persona. In questo spazio può emergere la possibilità di dare significato a ciò che il sintomo esprime e al posto che occupa nella propria esperienza di vita.</p>
+      </article>
+      <article data-card-text="3">
+        <h3>Difficoltà relazionali e familiari</h3>
+        <p>Le relazioni di coppia, familiari e genitoriali possono diventare luoghi di sofferenza quando la comunicazione si interrompe, i ruoli si irrigidiscono o alcuni eventi mettono in discussione gli equilibri costruiti nel tempo.</p>
+        <p>Riconoscere ciò che accade nelle relazioni e dare spazio di pensiero alle difficoltà, ai conflitti e ai cambiamenti che le attraversano può aiutare a comprendere meglio il significato di ciò che si sta vivendo e le modalità con cui ciascuno vi prende parte.</p>
+      </article>
+      <article data-card-text="4">
+        <h3>Cambiamenti e transizioni di vita</h3>
+        <p>Alcuni eventi — una separazione, una scelta professionale, un trasferimento, una nuova fase familiare — possono portare cambiamenti che chiedono tempo per essere compresi e integrati nella propria storia di vita.</p>
+        <p>Dare spazio a ciò che sta cambiando può aiutare a mettere a fuoco il significato di questi passaggi e a ritrovare un senso di coerenza con la propria esperienza: un modo di riconoscersi in ciò che si sta vivendo, anche dentro una fase di incertezza o ridefinizione.</p>
+      </article>
+      <article data-card-text="5">
+        <h3>Ansia, stress, vissuti depressivi</h3>
+        <p>Ansia, stress e vissuti depressivi sono esperienze comuni, ma quando diventano intensi o persistenti possono influenzare la quotidianità, le relazioni, il lavoro e i ritmi psicobiologici.</p>
+        <p>Riconoscere e dare significato a ciò che si sta vivendo può aiutare a comprendere il proprio malessere e a collocarlo nella propria storia personale, contribuendo alla costruzione di modalità più sostenibili di stare nella propria esperienza.</p>
+      </article>
+    </div>
+
     <div class="aiuto-cta reveal-scale" style="text-align:center">
       <p style="margin:0 auto 24px;max-width:60ch">Queste esperienze fanno parte della vita, ma quando diventano troppo intense possono ostacolare il benessere e influenzare la quotidianità.</p>
       <a class="btn" href="#contatti"><span class="mag">Voglio prendermi cura di me →</span></a>
@@ -1417,7 +1451,10 @@ footer .wrap{padding-block:clamp(64px,9vh,110px)}
     $('#modalIcon').innerHTML = d.icon;
     $('#modalTitle').textContent = d.title;
     $('#modalSub').textContent = d.sub;
-    $('#modalBody').innerHTML = d.body.map(function(p){return '<p>'+p+'</p>';}).join('');
+    var src = document.querySelector('[data-card-text="'+idx+'"]');
+    $('#modalBody').innerHTML = src
+      ? Array.prototype.map.call(src.querySelectorAll('p'), function(p){return p.outerHTML;}).join('')
+      : d.body.map(function(p){return '<p>'+p+'</p>';}).join('');
     lastFocus = document.activeElement;
     modal.classList.add('open');
     document.body.classList.add('modal-open');
